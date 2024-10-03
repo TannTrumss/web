@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav>
+      <!-- Container to hold the gear button and search bar together -->
+      <div class="center-container">
+        <div class="dropdown-container">
+          <button type="button" class="srtbtn" id="srt" onclick="toggleDropdown()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+              <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu: Initially Hidden -->
+          <div id="dropdown-menu" class="dropdown-menu">
+            <ul>
+              <li><a href="#">Sort by Name</a></li>
+              <li><a href="#">Sort by Student Number</a></li>
+              <li><a href="#">Sort by Year</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="Search">
+          <form>
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Logout button on the right -->
+      <button type="submit" class="logoutbtn" id="lgt">Logout</button>
+    </nav>
+
+    <!-- Scrollable Table Container -->
+    <div class="table-container">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <!-- Create 12 columns -->
+            <th>Student No.</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>GWA</th>
+            <th>Survey 1</th>
+            <th>Survey 2</th>
+            <th>Survey 3</th>
+            <th>Survey 4</th>
+            <th>Survey 5</th>
+            <th>Survey 6</th>
+            <th>Survey 7</th>
+            <th>Prediction</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <!-- Create 6 rows with 12 columns each -->
+          <tr>
+            <td>1</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- JavaScript to Toggle Dropdown Visibility -->
+    <script>
+      function toggleDropdown() {
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Hide the dropdown if clicked outside of it
+      document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('dropdown-menu');
+        const button = document.getElementById('srt');
+
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.style.display = 'none';
+        }
+      });
+
+      document.getElementById("lgt").addEventListener("click", function() {
+        window.location.href = "login-admin.html";
+      });
+    </script>
+  </body>
+</html>
